@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Facebook</title>
+    <link rel = "icon" href="https://static.vecteezy.com/system/resources/previews/056/006/607/non_2x/facebook-logo-icon-file-free-png.png">
+    <style>
+        body {
+            background-color: #f0f2f5;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .main-content {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 72px 0;
+        }
+
+        .container {
+            display: flex;
+            width: 980px;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .generaltext {
+            width: 580px;
+            padding-right: 32px;
+        }
+
+        .generaltext h1 {
+            color: #1877f2;
+            font-size: 60px;
+            margin-bottom: 0px;
+            letter-spacing: -2px;
+        }
+
+        .generaltext h3 {
+            font-size: 28px;
+            font-weight: normal;
+            line-height: 1.2;
+            margin-top: 20px;
+            width: 500px;
+        }
+
+        .right-section {
+            display: flex;
+            flex-direction: column;
+            width: 400px;
+        }
+
+        .loginbox {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        input {
+            height: 52px;
+            width: 100%;
+            margin-bottom: 12px;
+            padding: 14px;
+            border: 1px solid #dddfe2;
+            border-radius: 6px;
+            font-size: 17px;
+            box-sizing: border-box;
+        }
+
+        #btn {
+            background-color: #1877f2;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 10px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 4px;
+        }
+
+        #btn:hover { background-color: #166fe5; }
+
+        #forgot {
+            display: block;
+            font-size: 14px;
+            color: #1877f2;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        hr {
+            border: 0;
+            border-top: 1px solid #dadde1;
+            margin-bottom: 20px;
+        }
+
+        #green {
+            background-color: #42b72a;
+            border: none;
+            border-radius: 6px;
+            font-size: 17px;
+            font-weight: bold;
+            padding: 0 16px;
+            height: 48px;
+            cursor: pointer;
+            width: fit-content;
+            align-self: center;
+        }
+
+        #green:hover { background-color: #36a420; }
+
+        a { text-decoration: none; }
+        
+        a:hover { text-decoration: underline; }
+
+        .footer-text {
+            font-size: 14px;
+            text-align: center;
+            color: #1c1e21;
+        }
+    
+        .textg {
+            background-color: white;
+            color: #737373;
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            padding: 20px 0;
+            border-top: 1px solid #dddfe2;
+            width: 100%;
+            text-align: center;
+            margin-top: auto;
+        }
+        .footer-container {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .languages {
+            margin-bottom: 16px;
+            line-height: 1.6;
+        }
+        
+        .languages a {
+            color: #737373;
+            text-decoration: none;
+            margin: 0 6px;
+        }
+        
+        .languages a:hover {
+            text-decoration: underline;
+        }
+        
+        #plus {
+            background-color: #f4f4f4;
+            color: #474747;
+            border: 1px solid #ccd0d5;
+            border-radius: 3px;
+            width: 30px;
+            height: 20px;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+            margin-left: 10px;
+            vertical-align: middle;
+            padding: 0;
+            line-height: 18px;
+        }
+        
+        .footer-links {
+            margin-top: 12px;
+            line-height: 1.8;
+        }
+        
+        .footer-links a {
+            color: #8a8d91;
+            text-decoration: none;
+            margin: 0 8px;
+            white-space: nowrap;
+        }
+        
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        
+        .footer-divider {
+            border: 0;
+            border-top: 1px solid #dddfe2;
+            margin: 16px auto;
+            width: 100%;
+        }
+        
+        .meta-copyright {
+            margin-top: 20px;
+            color: #8a8d91;
+            font-size: 11px;
+        }
+        
+        .footer-text b { color: black; }
+    </style>
+</head>
+<body>
+
+    <div class="main-content">
+        <div class="container">
+            <div class="generaltext">
+                <h1>facebook</h1>
+                <h3>Facebook помогает вам всегда оставаться на связи и общаться со своими знакомыми.</h3>
+            </div>
+
+            <div class="right-section">
+                <div class="loginbox">
+                    <form>
+                        <input type="text" placeholder="Электронный адрес или номер телефона">
+                        <input type="password" placeholder="Пароль">
+                        <button id="btn" type="submit">Вход</button>
+                        <a id="forgot" href="https://www.facebook.com/login/identify/">Забыли пароль?</a>
+                        <hr>
+                        <button id="green" type="button">
+                            <a href="https://www.facebook.com/r.php" style="color:white">Создать новый аккаунт</a>
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="footer-text">
+                    <a href="https://www.facebook.com/pages/create/" style="color: black;"><b>Создать Страницу</b></a> знаменитости, музыкальной группы или компании.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="textg">
+        <div class="footer-container">
+            <!-- Тілдер тізімі -->
+            <div class="languages">
+                <a href="#">Русский</a>
+                <a href="#">Қазақша</a>
+                <a href="#">English (US)</a>
+                <a href="#">Türkçe</a>
+                <a href="#">Bahasa Indonesia</a>
+                <a href="#">中文(简体)</a>
+                <a href="#">Deutsch</a>
+                <a href="#">한국어</a>
+                <a href="#">Shqip</a>
+                <a href="#">Español</a>
+                <a href="#">Português (Brasil)</a>
+                <button id="plus">+</button>
+            </div>
+            
+            <hr class="footer-divider">
+            
+            <!-- Негізгі сілтемелер -->
+            <div class="footer-links">
+                <a href="#">Зарегистрироваться</a>
+                <a href="#">Вход</a>
+                <a href="#">Messenger</a>
+                <a href="#">Facebook Lite</a>
+                <a href="#">Видео</a>
+                <a href="#">Meta Pay</a>
+                <a href="#">Магазин Meta</a>
+                <a href="#">Meta Quest</a>
+                <a href="#">Ray-Ban Meta</a>
+                <a href="#">Meta AI</a>
+                <a href="#">Больше контактов от Meta AI</a>
+                <a href="#">Instagram</a>
+                <a href="#">Threads</a>
+                <a href="#">Центр информации о выборах</a>
+                <a href="#">Политика конфиденциальности</a>
+                <a href="#">Центр конфиденциальности</a>
+                <br>
+                <a href="#">Информация</a>
+                <a href="#">Создать рекламу</a>
+                <a href="#">Создать страницу</a>
+                <a href="#">Разработчикам</a>
+                <a href="#">Вакансии</a>
+                <a href="#">Файлы cookie</a>
+                <a href="#">Рекламные предложения</a>
+                <a href="#">Условия использования</a>
+                <br>
+                <a href="#">Справка</a>
+                <a href="#">Загрузка контактов и лица, не являющиеся пользователями</a>
+            </div>
+            
+            <div class="meta-copyright">
+                Meta © 2026
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
