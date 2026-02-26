@@ -1,0 +1,85 @@
+.product-card {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 15px;
+  background: white;
+  transition: transform 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: auto;
+}
+
+button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.like-btn { background: #ffebee; color: #c62828; }
+.wa { background: #e8f5e9; color: #2e7d32; }
+.tg { background: #e3f2fd; color: #1565c0; }
+.delete-btn { background: #fafafa; color: #d32f2f; border: 1px solid #d32f2f; margin-top: 10px; width: 100%; }
+.product-card {
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 20px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Карточкалардың бойын бірдей қылады */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.product-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.product-card h3 {
+  font-size: 1.1rem;
+  margin: 10px 0;
+  height: 2.4em; /* Аттары ұзын болса да бір деңгейде тұру үшін */
+  overflow: hidden;
+}
+
+.price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  margin: 10px 0;
+}
+
+.actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: auto; /* Батырмаларды астына тірейді */
+}
+
+.delete-btn {
+  grid-column: span 2; /* Өшіру батырмасы толық енді алады */
+  background: #f5f5f5;
+  color: #ff5252;
+}

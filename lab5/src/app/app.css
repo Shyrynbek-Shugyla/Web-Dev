@@ -1,0 +1,40 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  color: #c62828; /* Каспи түсі */
+}
+
+.category-menu {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+button {
+  padding: 12px 24px;
+  border: 1px solid #ddd;
+  background: white;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: 600;
+}
+
+button:hover {
+  border-color: #c62828;
+  color: #c62828;
+}
+
+button.active {
+  background: #c62828;
+  color: white;
+  border-color: #c62828;
+}
