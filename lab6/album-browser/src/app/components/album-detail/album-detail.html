@@ -1,0 +1,60 @@
+<div class="detail-container">
+    @if (loading) {
+    <div class="loading">
+        <div class="spinner"></div>
+        <p>Loading album details...</p>
+    </div>
+    }
+
+    @if (!loading && !album) {
+    <div class="empty-state">
+        <p>Album not found.</p>
+        <button class="back-btn" (click)="goBack()">← Back to Albums</button>
+    </div>
+    }
+
+    @if (!loading && album) {
+    <div class="detail-card">
+        <button class="back-btn" (click)="goBack()">← Back to Albums</button>
+
+        <div class="album-header">
+            <span class="album-badge">#{{ album.id }}</span>
+            <h1>{{ album.title }}</h1>
+        </div>
+
+        <div class="info-row">
+            <div class="info-item">
+                <span class="label">Album ID</span>
+                <span class="value">{{ album.id }}</span>
+            </div>
+            <div class="info-item">
+                <span class="label">User ID</span>
+                <span class="value">{{ album.userId }}</span>
+            </div>
+        </div>
+
+        <div class="edit-section">
+            <h2>Edit Title</h2>
+            <div class="edit-row">
+                <input type="text" [(ngModel)]="editTitle" class="edit-input" placeholder="Enter album title" />
+                <button class="save-btn" (click)="saveTitle()" [disabled]="saving">
+                    @if (saving) {
+                    Saving...
+                    } @else {
+                    Save
+                    }
+                </button>
+            </div>
+            @if (saved) {
+            <p class="success-msg">✓ Title updated successfully!</p>
+            }
+        </div>
+
+        <div class="actions">
+            <a [routerLink]="['/albums', album.id, 'photos']" class="photos-btn">
+                🖼️ View Photos
+            </a>
+        </div>
+    </div>
+    }
+</div>

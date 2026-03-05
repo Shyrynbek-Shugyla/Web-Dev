@@ -1,0 +1,32 @@
+<div class="albums-container">
+    <h1 class="page-title">Albums</h1>
+
+    @if (loading) {
+    <div class="loading">
+        <div class="spinner"></div>
+        <p>Loading albums...</p>
+    </div>
+    }
+
+    @if (!loading && albums.length === 0) {
+    <div class="empty-state">
+        <p>No albums found.</p>
+    </div>
+    }
+
+    @if (!loading && albums.length > 0) {
+    <div class="albums-list">
+        @for (album of albums; track album.id) {
+        <a [routerLink]="['/albums', album.id]" class="album-item">
+            <div class="album-info">
+                <span class="album-id">#{{ album.id }}</span>
+                <span class="album-title">{{ album.title }}</span>
+            </div>
+            <button class="delete-btn" (click)="deleteAlbum(album.id, $event)" title="Delete album">
+                ✕
+            </button>
+        </a>
+        }
+    </div>
+    }
+</div>
